@@ -7,6 +7,6 @@ import (
 
 func Index(w http.ResponseWriter, r *http.Request) {
 
-	fmt.Printf("访问了/index 页面")I
+	fmt.Println("访问了/index 页面")
 	w.Write([]byte("<html></head><title>index/</title></head><body><h1>index.html</h1></body></html>"))
 }

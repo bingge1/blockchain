@@ -3,12 +3,14 @@ package main
 import (
 	"fmt"
 	"net/http"
-	"router"
+
+	r "github.com/bingge/blockchain/router"
 )
 
 func main() {
 	app := http.NewServeMux()
-	router.Init()
+	r.Init(app)
+	fmt.Println("Server startup on localhost:18888")
 	http.ListenAndServe(":18888", app)
 }
 func test(w http.ResponseWriter, r *http.Request) {
